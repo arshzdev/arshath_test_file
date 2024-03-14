@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "867401004624",
+    "project_id": "mohamed-arshath-test-file",
+    "storage_bucket": "mohamed-arshath-test-file.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867401004624:android:40a43734dec674018b8355",
+        "android_client_info": {
+          "package_name": "com.example.arshath_test_file"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTNXO4egoNyCH2di9rkl4R3-yxoG-3wGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867401004624:android:1de79c2219af652a8b8355",
+        "android_client_info": {
+          "package_name": "com.example.mohamed_arshath_test_file"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTNXO4egoNyCH2di9rkl4R3-yxoG-3wGU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

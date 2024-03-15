@@ -12,10 +12,8 @@ class Querstion1 extends StatefulWidget {
 
 class _Querstion1State extends State<Querstion1> {
   @override
-
   var pickedFile = null;
   Widget build(BuildContext context) {
-
     Future<void> _pickFile() async {
       FilePickerResult? result = await FilePicker.platform.pickFiles(
         allowMultiple: true, // Allow multiple file selection
@@ -25,11 +23,13 @@ class _Querstion1State extends State<Querstion1> {
         for (final file in result.files) {
           final fileSize = file.size;
           if (fileSize <= 10 * 1024 * 1024) {
-            // File is within size limit, handle it 
+            // File is within size limit, handle it
             setState(() {
-            pickedFile = File(file.path!);
+              pickedFile = File(file.path!);
             });
-            final storageRef = FirebaseStorage.instance.ref().child('uploded_file/${file.name}');
+            final storageRef = FirebaseStorage.instance
+                .ref()
+                .child('uploded_file/${file.name}');
             UploadTask uploadTask =
                 storageRef.putFile(pickedFile); // Corrected line
 
@@ -56,20 +56,19 @@ class _Querstion1State extends State<Querstion1> {
         child: Center(
           child: Column(
             children: [
-              if(pickedFile != null)
-Expanded(
-child:Container(
-color:Colors.blue[100],
-child:Center(
-child:Image.file(File(pickedFile!.path!),
-width: double.infinity,
-fit: BoxFit.cover,
-),
- ),
-)
-),
-const SizedBox(height:32),
-
+              if (pickedFile != null)
+                Expanded(
+                    child: Container(
+                  color: Colors.blue[100],
+                  child: Center(
+                    child: Image.file(
+                      File(pickedFile!.path!),
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                )),
+              const SizedBox(height: 32),
               SizedBox(
                 width: 200,
                 child: ElevatedButton(
